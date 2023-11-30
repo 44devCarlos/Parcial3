@@ -1,0 +1,1257 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+* {
+	font-family: 'Exo 2', sans-serif;
+}
+body {
+	background-color: black; /*Utilizamos fondo negro para la página*/
+	margin: 0;
+	padding: 0;
+	display: flex; /*Lo "Flexeamos" en columna*/
+	flex-direction: column;
+}
+footer {
+	background-color: #333333; /*Para el footer utilizamos un gris oscuro*/
+	height: 120px;
+}
+.logo {
+	/*Posicionamos nuestro logo*/
+	float: left;
+	position: absolute;
+	width: 10%;
+	left: 5%;
+	top: 1%;
+}
+.logo::after {
+	/*Aqui limpiamos el float:left;*/
+	clear: left;
+}
+.menu {
+	/*Posicionamos nuestra imagen de menu*/
+	filter: invert(
+		100%
+	); /*Como la imagen es blanco con negro, le invertimos los colores para que caiga con el fondo*/
+	float: right;
+	position: absolute;
+	right: 5%;
+	top: 5%;
+}
+.menu::after {
+	/*Aqui limpiamos el float:right;*/
+	clear: right;
+}
+.main-container {
+	/*Aqui "flexeamos" nuestro contenedor principal, lo alineamos y posicion relativa*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+.section-container {
+	/*El 1° contenedor, alineamos todo al centro y su altura*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 800px;
+}
+.circle-item1,
+.circle-item2,
+.circle-item3 {
+	/*Posicion absoluta para poder mover los 3 circulos en diferentes posiciones*/
+	position: absolute;
+	border-radius: 50%;
+	box-shadow: 0 0 10px 1px gray; /*Le añadimos una pequeña sombra en gris*/
+}
+.circle-item1 {
+	/*Posicionamos nuestro 1° circulo tiene fondo blanco*/
+	background-color: white;
+	width: 600px;
+	height: 600px;
+	top: 7%;
+	right: 19%;
+}
+.circle-item2 {
+	/*Posicionamos nuestro 2° circulo */
+	width: 750px;
+	height: 750px;
+	top: 2%;
+	right: 9%;
+	overflow: hidden;
+}
+.circle-item3 {
+	/*Posicionamos nuestro 3° circulo que es de texto y que tiene fondo naranja*/
+	background-color: darkorange;
+	width: 720px;
+	height: 720px;
+	top: 6%;
+	right: 37%;
+}
+.circle3-text {
+	/*Posicionamos nuestro contenedor de texto*/
+	display: flex;
+	width: 450px;
+	height: 450px;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+	margin-left: 130px;
+	margin-top: 150px;
+}
+.circle3-text h1 {
+	/*El H1 del circulo de texto*/
+	font-size: 50px;
+	margin: 0;
+	padding: 0;
+}
+.circle3-text p {
+	/*El p del circulo de texto*/
+	font-size: 25px;
+	line-height: 1.5em;
+}
+.circle3-text a {
+	/*El a del circulo de texto*/
+	color: black;
+}
+.circle3-text a:hover {
+	/*Cuando pasa por encima del link se opaca*/
+	opacity: 0.7;
+}
+.circle3-text button {
+	/*El boton del circulo de texto*/
+	background-color: transparent;
+	border-style: solid;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-radius: 6em;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+	letter-spacing: 0.2em;
+}
+/*Estilo del boton cuando pasas por encima*/
+.circle3-text button:hover {
+	cursor: pointer;
+	background-color: black;
+	color: darkorange;
+	transition: 0.2s;
+}
+/*Estilo del banner que cubre todo el ancho de la pantalla*/
+.background-section2 {
+	width: 100%;
+	height: 320px;
+	margin-top: 450px;
+	display: block;
+	object-fit: cover;
+}
+/*Estilo del contenedor 2*/
+.section-container2 {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 300px;
+	background-color: darkorange;
+}
+/*Estilos para los item dentro del contenedor 2*/
+.container2-item1,
+.container2-item2,
+.container2-item3,
+.container2-item4 {
+	position: absolute;
+	border-radius: 50%;
+	background-color: white;
+	padding: 6px;
+	width: 170px;
+	height: 170px;
+	box-shadow: 0 0 10px 1px gray;
+}
+.container2-item1 {
+	/*Posicionamiento*/
+	top: -37%;
+	left: 11%;
+}
+.container2-item2 {
+	/*Posicionamiento*/
+	top: -37%;
+	left: 33%;
+}
+.container2-item3 {
+	/*Posicionamiento*/
+	top: -37%;
+	right: 33%;
+}
+.container2-item4 {
+	/*Posicionamiento*/
+	top: -37%;
+	right: 11%;
+}
+/*Estilo para las imagenes dentro del contenedor2*/
+.container2-item1 img,
+.container2-item2 img,
+.container2-item3 img,
+.container2-item4 img {
+	display: block;
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+	margin: 5px;
+}
+/*Estilo para los H2 dentro del contenedor2*/
+.container2-item1 h2,
+.container2-item2 h2,
+.container2-item3 h2,
+.container2-item4 h2 {
+	margin-top: 20px;
+	text-align: center;
+}
+/*Estilo para los p dentro del contenedor2*/
+.section-container2 p {
+	position: absolute;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 0;
+	bottom: 10%;
+}
+/*Estilo para los a dentro del contenedor2*/
+.section-container2 a {
+	color: black;
+}
+/*Estilo para los a dentro del contenedor2 cuando pasas por encima*/
+.section-container2 a:hover {
+	opacity: 0.9;
+}
+/*Estilo del contenedor 3*/
+.section-container3 {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 1500px;
+}
+/*Estilo para los contenedores dentro del container3*/
+.container3-item1,
+.container3-item2,
+.container3-item3,
+.container3-item4,
+.container3-item5 {
+	position: absolute;
+	border-radius: 50%;
+	box-shadow: 0 0 10px 1px gray;
+}
+/*Estilo para el contenedor3*/
+.container3-item1 {
+	width: 500px;
+	height: 500px;
+	right: 55%;
+	top: 11%;
+}
+/*Estilo para el contenedor3*/
+.container3-item2 {
+	width: 500px;
+	height: 500px;
+	left: 55%;
+	top: 13%;
+}
+/*Estilo para el contenedor3*/
+.container3-item3 {
+	width: 500px;
+	height: 500px;
+	right: 57%;
+	bottom: 14%;
+}
+/*Estilo para el contenedor3*/
+.container3-item4 {
+	width: 500px;
+	height: 500px;
+	left: 55%;
+	bottom: 14%;
+}
+/*Estilo para el contenedor3*/
+.container3-item5 {
+	background-color: darkorange;
+	width: 720px;
+	height: 720px;
+	top: 27%;
+}
+/*Estilo para el contenedor de texto*/
+.container3-text {
+	display: flex;
+	width: 600px;
+	height: 600px;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+	margin-left: 63px;
+	margin-top: 160px;
+}
+/*Estilo para el H1 del contenedor3*/
+.container3-text h1 {
+	font-size: 50px;
+	margin: 0;
+}
+/*Estilo para el p del contenedor3*/
+.container3-text p {
+	font-size: 25px;
+	line-height: 1.8em;
+}
+/*Estilo para el a del contenedor3*/
+.container3-text a {
+	color: black;
+}
+/*Estilo para el a del contenedor3 cuando pasas por encima*/
+.container3-text a:hover {
+	opacity: 0.9;
+}
+/*Estilo para el boton del contenedor3*/
+.container3-text button {
+	background-color: transparent;
+	border-style: solid;
+	border-color: black;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 6em;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 70px;
+	padding-right: 70px;
+	letter-spacing: 0.2em;
+}
+/*Estilo para el boton del contenedor3 cuando pasas por encima*/
+.container3-text button:hover {
+	cursor: pointer;
+	background-color: black;
+	color: darkorange;
+	transition: 0.2s;
+}
+/*Estilo para el container4*/
+.section-container4 {
+	background-color: darkorange;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	height: 700px;
+}
+/*Estilo para los contenedores dentro del container4*/
+.container4-item1,
+.container4-item2,
+.container4-item3,
+.container4-item4,
+.container4-item5,
+.container4-item6 {
+	position: absolute;
+	border-radius: 1em;
+	background-color: white;
+	font-weight: bold;
+	font-size: 30px;
+	width: 300px;
+	height: 100px;
+	align-items: center;
+	text-align: center;
+	box-sizing: border-box;
+	box-shadow: 0 0 10px 1px gray;
+}
+/*Estilo para el texto del contenedor4-item4*/
+.container4-item4 {
+	font-size: 25px;
+}
+/*Estilo para el titulo del contenedor4*/
+.container4-title {
+	position: absolute;
+	width: 800px;
+	top: 10px;
+	font-size: 45px;
+}
+/*Posicionamiento*/
+.container4-item1 {
+	top: 30%;
+	left: 27.4%;
+}
+/*Posicionamiento*/
+.container4-item2 {
+	top: 30%;
+	right: 27.4%;
+}
+/*Posicionamiento*/
+.container4-item3 {
+	top: 46%;
+	left: 27.4%;
+}
+/*Posicionamiento*/
+.container4-item4 {
+	top: 46%;
+	right: 27.4%;
+}
+/*Posicionamiento*/
+.container4-item5 {
+	top: 62%;
+	left: 27.4%;
+}
+/*Posicionamiento*/
+.container4-item6 {
+	top: 62%;
+	right: 27.4%;
+}
+/*Estilos para el boton del contenedor 4*/
+.section-container4 button {
+	position: absolute;
+	background-color: transparent;
+	border-style: solid;
+	border-color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 6em;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 70px;
+	padding-right: 70px;
+	letter-spacing: 0.2em;
+	bottom: 50px;
+}
+/*Estilos para el boton del contenedor 4 cuando pasas por encima*/
+.section-container4 button:hover {
+	cursor: pointer;
+	background-color: white;
+	color: black;
+	transition: 0.2s;
+}
+/*Estilos para los contenedores dentro del container 5*/
+.container5-item1,
+.container5-item2,
+.container5-item3,
+.container5-item4 {
+	position: absolute;
+	box-shadow: 0 0 10px 1px gray;
+}
+/*Estilos del contenedor5*/
+.section-container5 {
+	display: flex;
+	width: 100%;
+	height: 1320px;
+	position: relative;
+}
+/*Estilos para el item1 del contenedor 5*/
+.container5-item1 {
+	width: 580px;
+	height: 580px;
+	border-radius: 50%;
+	background-color: darkorange;
+	left: 300px;
+	top: 65px;
+}
+/*Estilos para el item2 del contenedor 5*/
+.container5-item2 {
+	width: 500px;
+	height: 580px;
+	border-radius: 20px;
+	background-color: whitesmoke;
+	position: absolute;
+	left: 150px;
+	top: 400px;
+	padding: 20px;
+	box-sizing: border-box;
+	z-index: 3;
+}
+/*Estilos para el item3 del contenedor 5*/
+.container5-item3 {
+	width: 550px;
+	height: 550px;
+	border-radius: 50%;
+	top: 290px;
+	left: 750px;
+}
+/*Estilos para el item4 del contenedor 5*/
+.container5-item4 {
+	width: 450px;
+	height: 450px;
+	border-radius: 50%;
+	top: 720px;
+	left: 550px;
+	z-index: 0;
+}
+/*Estilo del texto para el contenedor5*/
+.container5-text {
+	text-align: left;
+}
+/*Estilo para los H1 del contenedor5*/
+.container5-text h1 {
+	font-size: 65px;
+	margin: 0;
+}
+/*Estilo para los p del contenedor5*/
+.container5-text p {
+	font-size: 20px;
+	line-height: 1.8em;
+}
+/*Estilo para los a del contenedor5*/
+.container5-text a {
+	color: black;
+}
+/*Estilo para los a del contenedor5 cuando pasas por encima*/
+.container5-text a:hover {
+	opacity: 0.9;
+}
+/*Estilo para el boton del contenedor5*/
+.container5-text button {
+	background-color: transparent;
+	border-style: solid;
+	border-color: darkorange;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 6em;
+	padding: 20px 65px;
+	letter-spacing: 0.2em;
+}
+/*Estilo para el boton del contenedor5 cuando pasas por encima*/
+.container5-text button:hover {
+	cursor: pointer;
+	background-color: darkorange;
+	color: white;
+	transition: 0.2s;
+}
+/*Estilo de la seccion 6*/
+.section6-container {
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 1500px;
+	background-color: darkorange;
+	padding: auto;
+}
+/*Estilo de la primera caja de la seccion 6*/
+.section6-border {
+	position: absolute;
+	top: 150px;
+	left: 700px;
+	border: 2px solid #ffffff;
+	border-radius: 15px;
+	background-color: white;
+	padding: 0;
+	width: 550px;
+	height: 420px;
+	z-index: 2;
+}
+/*Estilo de titulo para la caja border*/
+.container6-title {
+	position: absolute;
+	top: 0px;
+	left: 70px;
+	font-size: 45px;
+}
+/*Estilo texto 1 para la caja border*/
+.container6-text1 {
+	top: 124px;
+	font-size: 22px;
+	position: absolute;
+	left: 70px;
+	margin-right: 15px;
+}
+/*Estilo texto 2 para la caja border*/
+.container6-text2 {
+	top: 204px;
+	font-size: 22px;
+	position: absolute;
+	left: 70px;
+}
+/*Estilo imagen para la seccion 6*/
+.section6-image {
+	background-color: darkorange;
+	position: absolute;
+	left: 170px;
+	top: 350px;
+	z-index: 1;
+	border-radius: 50%;
+	width: 800px;
+	height: 800px;
+}
+.section6-image,
+.section6-border,
+.section6-boxes {
+	box-shadow: 0 0 10px 1px gray; /*Una sombra alrededor para los contenedores de la seccion 6*/
+}
+/*Estilo para la caja 1 de la seccion 6*/
+.section6-item1 {
+	position: absolute;
+	top: 780px;
+	left: 90px;
+	z-index: 2;
+}
+/*Estilo para la caja 2 de la seccion 6*/
+.section6-item2 {
+	position: absolute;
+	top: 780px;
+	left: 353px;
+	z-index: 2;
+}
+/*Estilo para la caja 3 de la seccion 6*/
+.section6-item3 {
+	position: absolute;
+	top: 780px;
+	left: 616px;
+	z-index: 2;
+}
+/*Estilo para la caja 4 de la seccion 6*/
+.section6-item4 {
+	position: absolute;
+	top: 780px;
+	left: 879px;
+	z-index: 2;
+}
+/*Estilo para el titulo de la caja 1 de la seccion 6*/
+.container6box-title {
+	font-size: 25px;
+	margin: 0;
+	position: absolute;
+	top: 90px;
+	left: 45px;
+}
+/*Estilo para el titulo de la caja 2 de la seccion 6*/
+.container6box-title2 {
+	width: 200px;
+	font-size: 25px;
+	margin: 0;
+	position: absolute;
+	top: 90px;
+	left: 45px;
+}
+/*Estilo para el titulo de la caja 3 de la seccion 6*/
+.container6box-title3 {
+	font-size: 20px;
+	margin: 15px;
+	position: absolute;
+	top: 90px;
+	left: 45px;
+}
+/*Estilo para el titulo de la caja 4 de la seccion 6*/
+.container6box-title4 {
+	font-size: 20px;
+	margin: 15px;
+	position: absolute;
+	top: 90px;
+	left: 45px;
+}
+/*Estilo para el subtitulo de la caja 1 de la seccion 6*/
+.container6box-subtitle {
+	position: absolute;
+	top: 145px;
+	left: 90px;
+}
+/*Estilo para el subtitulo de la caja 2 de la seccion 6*/
+.container6box-subtitle2 {
+	position: absolute;
+	top: 145px;
+	left: 75px;
+}
+/*Estilo para el subtitulo de la caja 3 de la seccion 6*/
+.container6box-subtitle3 {
+	text-align: center;
+	margin-right: 65px;
+	position: absolute;
+	top: 145px;
+	left: 65px;
+}
+/*Estilo para el subtitulo de la caja 4 de la seccion 6*/
+.container6box-subtitle4 {
+	position: absolute;
+	top: 145px;
+	left: 95px;
+}
+/*Estilo para las cajas de la seccion 6*/
+.section6-boxes {
+	border: 2px solid #ffffff;
+	border-radius: 15px;
+	background-color: white;
+	font-weight: bold;
+	padding: 0;
+	width: 225px;
+	height: 250px;
+	z-index: 2;
+	margin: 15px;
+}
+/*Estilo para el boton de la seccion 6*/
+.section6-container button {
+	position: absolute;
+	bottom: 75px;
+	left: 70px;
+	background-color: transparent;
+	border-style: solid;
+	border-color: darkorange;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 6em;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 70px;
+	padding-right: 70px;
+	letter-spacing: 0.2em;
+}
+/*Estilo para el boton de la seccion 6 cuando pasas por encima*/
+.section6-container button:hover {
+	cursor: pointer;
+	background-color: darkorange;
+	color: white;
+	transition: 0.2s;
+}
+/*Estilo para el a de la seccion 6*/
+.section6-border a {
+	color: black;
+}
+/*Estilo para el a de la seccion 6 cuando pasas por encima*/
+.section6-border a:hover {
+	opacity: 0.8;
+}
+/*Estilo para la seccion 7*/
+.section7-container {
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 750px;
+	background-color: white;
+	padding: auto;
+}
+/*Estilo para la caja 1 de la seccion 7*/
+.section7-item1 {
+	position: absolute;
+	top: -150px;
+	left: 90px;
+	z-index: 2;
+}
+/*Estilo para la caja 2 de la seccion 7*/
+.section7-item2 {
+	position: absolute;
+	top: -150px;
+	left: 353px;
+	z-index: 2;
+}
+/*Estilo para la caja 3 de la seccion 7*/
+.section7-item3 {
+	position: absolute;
+	top: -150px;
+	left: 616px;
+	z-index: 2;
+}
+/*Estilo para la caja 4 de la seccion 7*/
+.section7-item4 {
+	position: absolute;
+	top: -150px;
+	left: 879px;
+	z-index: 2;
+}
+/*Estilo para las cajas de la seccion 7*/
+.section7-boxes {
+	border: 2px solid #ffffff;
+	border-radius: 15px;
+	background-color: white;
+	padding: 0;
+	width: 240px;
+	height: 250px;
+	z-index: 2;
+	margin: 15px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+/*Estilo para el titulo de la caja 1 de la seccion 7*/
+.container7box-title {
+	font-size: 20px;
+	margin: 15px;
+	position: absolute;
+	top: 90px;
+	left: 30px;
+}
+/*Estilo para el titulo de la caja 2 de la seccion 7*/
+.container7box-title2 {
+	font-size: 20px;
+	margin: 15px;
+	position: absolute;
+	top: 90px;
+	left: 45px;
+}
+/*Estilo para el titulo de la caja 3 de la seccion 7*/
+.container7box-title3 {
+	font-size: 20px;
+	margin: 15px;
+	position: absolute;
+	top: 90px;
+	left: 45px;
+}
+/*Estilo para el titulo de la caja 4 de la seccion 7*/
+.container7box-title4 {
+	font-size: 20px;
+	margin: 15px;
+	position: absolute;
+	top: 90px;
+	left: 45px;
+}
+/*Estilo para el subtitulo de la caja 1 de la seccion 7*/
+.container7box-subtitle {
+	position: absolute;
+	top: 145px;
+	left: 90px;
+}
+/*Estilo para el subtitulo de la caja 2 de la seccion 7*/
+.container7box-subtitle2 {
+	position: absolute;
+	top: 145px;
+	left: 90px;
+}
+/*Estilo para el subtitulo de la caja 3 de la seccion 7*/
+.container7box-subtitle3 {
+	position: absolute;
+	top: 145px;
+	left: 90px;
+}
+/*Estilo para el subtitulo de la caja 4 de la seccion 7*/
+.container7box-subtitle4 {
+	position: absolute;
+	top: 145px;
+	left: 90px;
+}
+/*Estilo para el campo del formulario de la seccion 7*/
+.section7-container fieldset {
+	border: none;
+}
+/*Estilo para la leyenda del formulario de la seccion 7*/
+.section7-container legend {
+	padding: 0;
+	margin-left: 10px;
+	font-size: 30px;
+	font-style: bold;
+}
+/*Estilo para el campo de correo de la seccion 7*/
+.mail-container {
+	position: absolute;
+	top: 200px;
+	left: 120px;
+}
+/*Estilo para el campo de nombre de la seccion 7*/
+.name-container {
+	position: absolute;
+	top: 200px;
+	left: 390px;
+}
+/*Estilo para el campo de mensaje de la seccion 7*/
+.msg-container {
+	position: absolute;
+	top: 320px;
+	left: 120px;
+}
+/*Estilo para la caja de texto de la seccion 7*/
+.text-container7 {
+	position: absolute;
+	top: 153px;
+	left: 700px;
+}
+/*Estilo para el H1 de la caja texto de la seccion 7*/
+.text-container7 h1 {
+	font-size: 45px;
+	color: darkorange;
+	margin-bottom: 25px;
+}
+/*Estilo para el H2 de la caja texto de la seccion 7*/
+.text-container7 h2 {
+	margin: 0;
+	font-size: 28px;
+}
+/*Estilo para el p de la caja texto de la seccion 7*/
+.text-container7 p {
+	margin-right: 150px;
+	font-size: 20px;
+	margin-bottom: 50px;
+}
+/*Estilo para las imagenes de la caja texto de la seccion 7*/
+.img-container7-1 {
+	filter: invert(72%) sepia(94%) saturate(3654%) hue-rotate(358deg)
+		brightness(99%) contrast(108%);
+	position: absolute;
+	top: 330px;
+	left: 0px;
+	margin: 0;
+	padding: 0;
+}
+/*Estilo para las imagenes de la caja texto de la seccion 7*/
+.img-container7-2 {
+	filter: invert(72%) sepia(94%) saturate(3654%) hue-rotate(358deg)
+		brightness(99%) contrast(108%);
+	position: absolute;
+	top: 330px;
+	left: 50px;
+	margin: 0;
+	padding: 0;
+}
+/*Estilo para las imagenes de la caja texto de la seccion 7*/
+.img-container7-3 {
+	filter: invert(72%) sepia(94%) saturate(3654%) hue-rotate(358deg)
+		brightness(99%) contrast(108%);
+	position: absolute;
+	top: 336px;
+	left: 110px;
+	margin: 0;
+	padding: 0;
+}
+/*Estilo para las imagenes de la caja texto de la seccion 7*/
+.img-container7-4 {
+	filter: invert(72%) sepia(94%) saturate(3654%) hue-rotate(358deg)
+		brightness(99%) contrast(108%);
+	position: absolute;
+	top: 335px;
+	left: 165px;
+	margin: 0;
+	padding: 0;
+}
+/*Estilo para el boton del formulario de la seccion 7*/
+.section7-container button {
+	position: absolute;
+	top: 510px;
+	left: 135px;
+	width: 500px;
+	height: 50px;
+	color: white;
+	margin: 0;
+	background-color: #ff8c00;
+	border-style: solid;
+	border-color: darkorange;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 6em;
+	padding: 5px 15px;
+	letter-spacing: 0.2em;
+}
+/*Estilo para el boton del formulario de la seccion 7 cuando pasas por encima*/
+.section7-container button:hover {
+	cursor: pointer;
+	background-color: transparent;
+	color: darkorange;
+	transition: 0.2s;
+}
+/*Estilos para los label del formulario*/
+#nombre,
+#correo,
+#msg {
+	border: none;
+	outline: none;
+	margin: 0;
+	padding: 10px 12px;
+	font-size: 20px;
+	width: 100%;
+	border-bottom: 2px solid darkorange;
+}
+/*Más estilos*/
+#nombre::placeholder,
+#correo::placeholder {
+	color: #00000085;
+	padding-left: 5px;
+	width: 100%;
+}
+/*Estilo del mensaje*/
+#msg {
+	width: 105%;
+}
+/*Estilo del mensaje*/
+#msg::placeholder {
+	color: #00000085;
+	width: 100%;
+}
+/*Estilo para el texto del footer*/
+.footfont {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Open Sans", sans-serif;
+	color: white;
+	margin-top: 55px;
+}
+@media (max-width: 619px) {
+	/*No se si esto tambien se tenga que comentar
+	porque es lo mismo de arriba solo que cambiando de posicion
+	y algunas alturas o ancho*/
+	.logo {
+		width: 15%;
+	}
+	section {
+		overflow: hidden;
+	}
+	.section-container {
+		height: 800px;
+	}
+	.circle-item1 {
+		display: none;
+	}
+	.circle-item2 {
+		width: 500px;
+		height: 500px;
+		top: 1.5%;
+	}
+	.circle-item3 {
+		width: 700px;
+		height: 700px;
+		top: 6%;
+		right: -5%;
+	}
+	.circle3-text {
+		overflow: visible;
+		width: 400px;
+		margin-left: 150px;
+	}
+	.section-container2 {
+		overflow: visible;
+		height: 600px;
+	}
+	.container2-item1,
+	.container2-item2,
+	.container2-item3,
+	.container2-item4 {
+		overflow: visible;
+	}
+	.container2-item1 {
+		top: -21%;
+	}
+	.container2-item2 {
+		top: -21%;
+		left: 55%;
+	}
+	.container2-item3 {
+		top: 21%;
+		left: 11%;
+	}
+	.container2-item4 {
+		top: 21%;
+		left: 55%;
+	}
+	.section-container3 {
+		height: 1800px;
+	}
+	.container3-item1,
+	.container3-item2,
+	.container3-item3,
+	.container3-item4 {
+		width: 350px;
+		height: 350px;
+	}
+	.container3-item1 {
+		top: 2%;
+		right: 5%;
+	}
+	.container3-item2 {
+		top: 21%;
+		left: 5%;
+	}
+	.container3-item3 {
+		bottom: 22%;
+		left: 5%;
+	}
+	.container3-item4 {
+		bottom: 3%;
+		left: 37%;
+	}
+	.container3-item5 {
+		width: 600px;
+		height: 600px;
+		top: 32%;
+	}
+	.container3-text {
+		width: 500px;
+		margin: 0;
+		margin-top: 80px;
+		margin-left: 50px;
+	}
+	.container3-text p {
+		font-size: 22px;
+	}
+	.section-container4 {
+		width: 100%;
+		height: 1100px;
+		justify-content: center;
+		flex-direction: column;
+		gap: 10px;
+	}
+	.container4-item1,
+	.container4-item2,
+	.container4-item3,
+	.container4-item4,
+	.container4-item5,
+	.container4-item6 {
+		position: static;
+		width: 90%;
+		font-size: 30px;
+	}
+	.container4-title {
+		width: 100%;
+		top: 0.1%;
+	}
+	.section-container4 button {
+		bottom: 11%;
+	}
+	.section-container5 {
+		height: 1500px;
+	}
+	.container5-item1 {
+		width: 370px;
+		height: 370px;
+		top: 1%;
+		left: 6%;
+	}
+	.container5-item2 {
+		top: 58%;
+		left: 5%;
+	}
+	.container5-item3 {
+		width: 400px;
+		height: 400px;
+		top: 15%;
+		left: 20%;
+	}
+	.container5-item4 {
+		width: 370px;
+		height: 370px;
+		top: 37%;
+		left: 12%;
+	}
+	.container5-text h1 {
+		margin-top: 20px;
+		padding-left: 5px;
+		font-size: 50px;
+	}
+	.section6-container {
+		height: 1300px;
+	}
+	.section6-border {
+		top: 5%;
+		left: 25%;
+		width: 430px;
+		height: 450px;
+	}
+	.section6-image {
+		width: 500px;
+		height: 500px;
+		left: 4%;
+	}
+	.section6-boxes {
+		width: 260px;
+		height: 180px;
+	}
+	.section6-item1 {
+		left: 3%;
+	}
+	.section6-item2 {
+		left: 50%;
+	}
+	.section6-item3 {
+		left: 3%;
+		top: 77%;
+	}
+	.section6-item4 {
+		left: 50%;
+		top: 77%;
+	}
+	.container6box-title {
+		top: 25%;
+		left: 17%;
+	}
+	.container6box-subtitle {
+		top: 60%;
+		left: 25%;
+	}
+	.container6box-title2 {
+		top: 25%;
+		left: 20%;
+	}
+	.container6box-subtitle2 {
+		top: 60%;
+		left: 27%;
+	}
+	.container6box-title3 {
+		top: 25%;
+		left: 13%;
+	}
+	.container6box-subtitle3 {
+		top: 60%;
+		left: 23%;
+	}
+	.container6box-title4 {
+		top: 25%;
+		left: 13%;
+	}
+	.container6box-subtitle4 {
+		top: 60%;
+		left: 27%;
+	}
+	.section7-container {
+		height: 2300px;
+	}
+	.section7-boxes {
+		width: 550px;
+		height: 250px;
+	}
+	.section7-item1 {
+		top: 1%;
+		left: 2.5%;
+	}
+	.section7-item2 {
+		top: 13%;
+		left: 2.5%;
+	}
+	.section7-item3 {
+		top: 25%;
+		left: 2.5%;
+	}
+	.section7-item4 {
+		top: 37%;
+		left: 2.5%;
+	}
+	.mail-container {
+		top: 52%;
+		left: 4%;
+	}
+	.name-container {
+		top: 52%;
+		left: 47%;
+	}
+	.msg-container {
+		top: 58%;
+		left: 4%;
+	}
+	.section7-container button {
+		top: 67%;
+		left: 9%;
+	}
+	.text-container7 {
+		top: 72%;
+		left: 6%;
+		padding-bottom: 5px;
+	}
+	.container7box-title {
+		left: 29%;
+	}
+	.container7box-title2 {
+		left: 25%;
+	}
+	.container7box-title3 {
+		left: 31%;
+	}
+	.container7box-title4 {
+		left: 27%;
+	}
+	.container7box-subtitle,
+	.container7box-subtitle2,
+	.container7box-subtitle3,
+	.container7box-subtitle4 {
+		left: 45%;
+	}
+	.img-container7-1 {
+		top: 92%;
+	}
+	.img-container7-2 {
+		top: 92%;
+	}
+	.img-container7-3 {
+		top: 93.5%;
+	}
+	.img-container7-4 {
+		top: 93.5%;
+	}
+}
