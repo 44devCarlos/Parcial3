@@ -27,9 +27,6 @@ footer {
 }
 .menu {
 	/*Posicionamos nuestra imagen de menu*/
-	filter: invert(
-		100%
-	); /*Como la imagen es blanco con negro, le invertimos los colores para que caiga con el fondo*/
 	float: right;
 	position: absolute;
 	right: 5%;
@@ -66,14 +63,14 @@ footer {
 	background-color: white;
 	width: 600px;
 	height: 600px;
-	top: 7%;
+	top: 50%;
 	right: 19%;
 }
 .circle-item2 {
 	/*Posicionamos nuestro 2° circulo */
 	width: 750px;
 	height: 750px;
-	top: 2%;
+	top: 10%;
 	right: 9%;
 	overflow: hidden;
 }
@@ -82,7 +79,7 @@ footer {
 	background-color: darkorange;
 	width: 720px;
 	height: 720px;
-	top: 6%;
+	top: 30%;
 	right: 37%;
 }
 .circle3-text {
@@ -965,6 +962,46 @@ footer {
 	color: white;
 	margin-top: 55px;
 }
+
+.hamburger {
+	cursor: pointer;
+  }
+  
+  .hamburger input {
+	display: none;
+  }
+  
+  .hamburger svg {
+	/* The size of the SVG defines the overall size */
+	height: 3em;
+	/* Define the transition for transforming the SVG */
+	transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line {
+	fill: none;
+	stroke: white;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 3;
+	/* Define the transition for transforming the Stroke */
+	transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+				stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line-top-bottom {
+	stroke-dasharray: 12 63;
+  }
+  
+  .hamburger input:checked + svg {
+	transform: rotate(-45deg);
+  }
+  
+  .hamburger input:checked + svg .line-top-bottom {
+	stroke-dasharray: 20 300;
+	stroke-dashoffset: -32.42;
+  }
+  
 @media (max-width: 619px) {
 	/*No se si esto tambien se tenga que comentar
 	porque es lo mismo de arriba solo que cambiando de posicion
